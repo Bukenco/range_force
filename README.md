@@ -5,20 +5,18 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version:  2.6.5
+* Rails 5.2.4.1
+* psql (PostgreSQL) 13.1
 
-* System dependencies
+* Git clone master branch.
+* Set up db connection(Postgre)
+* run: bundle
+* run: rails db:migrate
+* run: rails db:seed
+* run: rails rswag:specs:swaggerize RAILS_ENV=development
+* run: rails s
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+You can see the swagger interface here: http://localhost:3000/api-docs/index.html
 
 * ...
