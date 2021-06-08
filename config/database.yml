@@ -1,20 +1,14 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  pool: 100gemfile
+  pool: 100
 
 development:
-  adapter: postgresql
-  encoding: unicode
-  database: range_force
-  pool: 5
-  username: buka
-  password: "123456789"
-
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
 test:
-  adapter: postgresql
-  encoding: unicode
-  database: range_force_test
-  pool: 5
-  username: buka
-  password: "123456789"
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
+production:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
